@@ -1,0 +1,1534 @@
+/* =========================
+   DASAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Fredoka", sans-serif;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    color: #7777a5;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe7f2,
+            #e6f5ff,
+            #fff0fa,
+            #e5f3ff
+        );
+
+    background-size: 400% 400%;
+
+    animation: gradientMove 12s ease infinite;
+
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.dream-bg {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: -2;
+
+}
+
+
+.blob {
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    filter: blur(60px);
+
+    opacity: .45;
+
+    animation:
+        blobMove
+        12s
+        ease-in-out
+        infinite;
+
+}
+
+
+.blob1 {
+
+    background: #ffb6d9;
+
+    top: -100px;
+
+    left: -100px;
+
+}
+
+
+.blob2 {
+
+    background: #a9dcff;
+
+    right: -100px;
+
+    top: 30%;
+
+    animation-delay: 3s;
+
+}
+
+
+.blob3 {
+
+    background: #ffd4ed;
+
+    bottom: -120px;
+
+    left: 35%;
+
+    animation-delay: 6s;
+
+}
+
+
+/* =========================
+   HIASAN
+========================= */
+
+.floating-decoration {
+
+    position: fixed;
+
+    top: 25px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 20px;
+
+    letter-spacing: 18px;
+
+    color:
+        rgba(
+            255,
+            105,
+            170,
+            .45
+        );
+
+    z-index: 10;
+
+    pointer-events: none;
+
+    animation:
+        floatDecoration
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+}
+
+
+.hero {
+
+    width: min(
+        700px,
+        95%
+    );
+
+    text-align: center;
+
+    padding:
+        40px 25px;
+
+    animation:
+        heroAppear
+        1s
+        ease;
+
+}
+
+
+.small-title {
+
+    display: inline-block;
+
+    padding:
+        9px 20px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .7
+        );
+
+    color: #ff73ad;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            255,
+            100,
+            170,
+            .1
+        );
+
+}
+
+
+.bunny {
+
+    font-size: 80px;
+
+    margin:
+        25px 0 10px;
+
+    animation:
+        bunnyFloat
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+.welcome {
+
+    font-size: 17px;
+
+    color: #8a8ab0;
+
+    margin-bottom: 8px;
+
+}
+
+
+.hero h1 {
+
+    font-family: "Pacifico", cursive;
+
+    font-size:
+        clamp(
+            45px,
+            8vw,
+            75px
+        );
+
+    color: #ff6fae;
+
+    line-height: 1.2;
+
+    text-shadow:
+        4px 4px 0 white;
+
+    animation:
+        titleIn
+        1s
+        ease;
+
+}
+
+
+.hero h1 span {
+
+    color: #64b7ed;
+
+}
+
+
+.description {
+
+    max-width: 520px;
+
+    margin:
+        20px auto 30px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #7777a5;
+
+}
+
+
+/* =========================
+   BUTTON FOTO
+========================= */
+
+.memory-btn {
+
+    border: none;
+
+    padding:
+        15px 32px;
+
+    border-radius: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff82b8,
+            #72c5f4
+        );
+
+    color: white;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            255,
+            100,
+            170,
+            .25
+        );
+
+    transition: .3s;
+
+}
+
+
+.memory-btn:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.05);
+
+    box-shadow:
+        0 18px 40px
+        rgba(
+            255,
+            100,
+            170,
+            .35
+        );
+
+}
+
+
+/* =========================
+   MUSIC PLAYER
+========================= */
+
+.music-player {
+
+    width:
+        min(
+            360px,
+            100%
+        );
+
+    margin:
+        22px auto 0;
+
+    padding: 10px 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .75
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .9
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            100,
+            100,
+            180,
+            .12
+        );
+
+    backdrop-filter:
+        blur(10px);
+
+}
+
+
+.music-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffb6d9,
+            #a9dcff
+        );
+
+    font-size: 20px;
+
+}
+
+
+.music-info {
+
+    flex: 1;
+
+    text-align: left;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+}
+
+
+.music-info strong {
+
+    color: #7777a5;
+
+    font-size: 14px;
+
+}
+
+
+.music-info span {
+
+    color: #9999b8;
+
+    font-size: 11px;
+
+}
+
+
+.music-button {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff82b8,
+            #72c5f4
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.music-button:hover {
+
+    transform:
+        scale(1.1);
+
+}
+
+
+/* SAAT MUSIK AKTIF */
+
+.music-player.playing
+.music-icon {
+
+    animation:
+        musicSpin
+        2s
+        linear
+        infinite;
+
+}
+
+
+.music-player.playing {
+
+    box-shadow:
+        0 10px 35px
+        rgba(
+            255,
+            120,
+            180,
+            .25
+        );
+
+}
+
+
+/* =========================
+   TEXT BAWAH
+========================= */
+
+.scroll-text {
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    opacity: .65;
+
+    animation:
+        scrollBounce
+        2s
+        infinite;
+
+}
+
+
+/* =========================
+   ALBUM
+========================= */
+
+.album-page {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding-bottom: 50px;
+
+    animation:
+        pageIn
+        .7s
+        ease;
+
+}
+
+
+.album-header {
+
+    width:
+        min(
+            1200px,
+            94%
+        );
+
+    margin: auto;
+
+    padding:
+        60px 0 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+}
+
+
+.back-btn {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 65px;
+
+    border: none;
+
+    padding:
+        9px 17px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .8
+        );
+
+    color: #7777a5;
+
+    font-family:
+        "Fredoka",
+        sans-serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.back-btn:hover {
+
+    transform:
+        translateX(-5px);
+
+    background: white;
+
+    color: #ff70ac;
+
+}
+
+
+.album-title {
+
+    text-align: center;
+
+}
+
+
+.album-ribbon {
+
+    font-size: 38px;
+
+    animation:
+        bunnyFloat
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+.album-title h2 {
+
+    margin: 5px 0;
+
+    font-family:
+        "Pacifico",
+        cursive;
+
+    font-size:
+        clamp(
+            35px,
+            5vw,
+            55px
+        );
+
+    color: #ff6fae;
+
+    text-shadow:
+        3px 3px white;
+
+}
+
+
+.album-title p {
+
+    font-size: 14px;
+
+    color: #7777a5;
+
+}
+
+
+/* =========================
+   GRID FOTO
+========================= */
+
+.photo-album {
+
+    width:
+        min(
+            1200px,
+            94%
+        );
+
+    margin:
+        15px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+/* =========================
+   CARD FOTO
+========================= */
+
+.photo-card {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .82
+        );
+
+    padding:
+        8px 8px 12px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            100,
+            100,
+            180,
+            .12
+        );
+
+    transition: .3s;
+
+    animation:
+        photoAppear
+        .7s
+        ease
+        both;
+
+}
+
+
+.photo-card:hover {
+
+    transform:
+        translateY(-7px)
+        rotate(-1deg);
+
+    box-shadow:
+        0 18px 30px
+        rgba(
+            100,
+            100,
+            180,
+            .2
+        );
+
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.photo-frame {
+
+    width: 100%;
+
+    height: 230px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #f5e7f5;
+
+    position: relative;
+
+}
+
+
+.photo-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    transition: .4s;
+
+    display: block;
+
+}
+
+
+.photo-frame img:hover {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.photo-number {
+
+    position: absolute;
+
+    top: 8px;
+
+    left: 8px;
+
+    padding:
+        4px 9px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .88
+        );
+
+    color: #ff6fae;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    z-index: 2;
+
+}
+
+
+.photo-card p {
+
+    text-align: center;
+
+    margin-top: 9px;
+
+    font-family:
+        "Pacifico",
+        cursive;
+
+    font-size: 13px;
+
+    color: #7777a5;
+
+}
+
+
+/* =========================
+   PESAN BAWAH
+========================= */
+
+.album-message {
+
+    text-align: center;
+
+    padding:
+        45px 20px 20px;
+
+}
+
+
+.cute-cloud {
+
+    font-size: 45px;
+
+    animation:
+        cloudFloat
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+.album-message h2 {
+
+    margin:
+        12px 0;
+
+    font-family:
+        "Pacifico",
+        cursive;
+
+    color: #ff6fae;
+
+    font-size: 28px;
+
+}
+
+
+.album-message p {
+
+    color: #7777a5;
+
+    font-size: 14px;
+
+}
+
+
+.heart-line {
+
+    margin-top: 15px;
+
+    color: #ff76af;
+
+    letter-spacing: 8px;
+
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(
+            30,
+            30,
+            60,
+            .78
+        );
+
+    backdrop-filter:
+        blur(10px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .3s;
+
+    z-index: 999;
+
+}
+
+
+.modal.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.modal-content {
+
+    width:
+        min(
+            850px,
+            95%
+        );
+
+    text-align: center;
+
+    animation:
+        modalIn
+        .4s
+        ease;
+
+}
+
+
+.modal-content img {
+
+    max-width: 100%;
+
+    max-height: 75vh;
+
+    border-radius: 20px;
+
+    object-fit: contain;
+
+    box-shadow:
+        0 20px 60px
+        rgba(
+            0,
+            0,
+            0,
+            .4
+        );
+
+}
+
+
+.modal-content p {
+
+    color: white;
+
+    font-family:
+        "Pacifico",
+        cursive;
+
+    font-size: 20px;
+
+    margin-top: 12px;
+
+}
+
+
+.close {
+
+    position: absolute;
+
+    right: 30px;
+
+    top: 20px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 48px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.close:hover {
+
+    color: #ff82b8;
+
+    transform:
+        rotate(90deg)
+        scale(1.1);
+
+}
+
+
+/* =========================
+   ANIMASI
+========================= */
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+@keyframes blobMove {
+
+    0%, 100% {
+
+        transform:
+            translate(0, 0)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate(80px, -50px)
+            scale(1.15);
+
+    }
+
+}
+
+
+@keyframes floatDecoration {
+
+    0%, 100% {
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateX(-50%)
+            translateY(8px);
+
+    }
+
+}
+
+
+@keyframes bunnyFloat {
+
+    0%, 100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px)
+            rotate(3deg);
+
+    }
+
+}
+
+
+@keyframes heroAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes titleIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.8);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes scrollBounce {
+
+    0%, 100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(5px);
+
+    }
+
+}
+
+
+@keyframes pageIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes photoAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes cloudFloat {
+
+    0%, 100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px);
+
+    }
+
+}
+
+
+@keyframes modalIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.8);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes musicSpin {
+
+    from {
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+
+    .photo-album {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 15px;
+
+    }
+
+
+    .photo-frame {
+
+        height: 210px;
+
+    }
+
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 600px) {
+
+    .floating-decoration {
+
+        font-size: 14px;
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .hero {
+
+        padding:
+            50px 15px 30px;
+
+    }
+
+
+    .bunny {
+
+        font-size: 70px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .description {
+
+        font-size: 15px;
+
+    }
+
+
+    .music-player {
+
+        width: 95%;
+
+    }
+
+
+    .album-header {
+
+        padding-top: 90px;
+
+    }
+
+
+    .back-btn {
+
+        top: 25px;
+
+        left: 4%;
+
+    }
+
+
+    .album-title h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .album-title p {
+
+        font-size: 13px;
+
+    }
+
+
+    .photo-album {
+
+        width: 94%;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+
+    }
+
+
+    .photo-card {
+
+        padding:
+            6px 6px 10px;
+
+        border-radius: 13px;
+
+    }
+
+
+    .photo-frame {
+
+        height: 190px;
+
+        border-radius: 10px;
+
+    }
+
+
+    .photo-card p {
+
+        font-size: 11px;
+
+        margin-top: 7px;
+
+    }
+
+
+    .photo-number {
+
+        top: 6px;
+
+        left: 6px;
+
+        padding:
+            3px 7px;
+
+        font-size: 9px;
+
+    }
+
+
+    .album-message h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .close {
+
+        right: 20px;
+
+        top: 10px;
+
+    }
+
+}

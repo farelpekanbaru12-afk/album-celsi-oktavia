@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Pretty Photos 🎀</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Pacifico&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <div class="dream-bg">
+
+        <div class="blob blob1"></div>
+
+        <div class="blob blob2"></div>
+
+        <div class="blob blob3"></div>
+
+    </div>
+
+
+    <!-- HIASAN -->
+
+    <div class="floating-decoration">
+        ♡ ✦ ♡ ✧ ♥ ✦ ♡ ✧
+    </div>
+
+
+
+    <!-- =========================
+         AUDIO
+    ========================== -->
+
+    <audio
+        id="music"
+        src="musik/lagu.mp3"
+        loop
+    ></audio>
+
+
+
+    <!-- =========================
+         HALAMAN DEPAN
+    ========================== -->
+
+    <section
+        id="homePage"
+        class="home-page"
+    >
+
+        <div class="hero">
+
+
+            <div class="small-title">
+
+                🎀 a little photo gallery
+
+            </div>
+
+
+            <div class="bunny">
+
+                📸
+
+            </div>
+
+
+            <p class="welcome">
+
+                welcome to this little gallery
+
+            </p>
+
+
+            <h1>
+
+                Pretty
+
+                <span>Photos!</span>
+
+            </h1>
+
+
+            <p class="description">
+
+                A small collection of beautiful photos,
+                cute pictures & lovely vibes ♡
+
+            </p>
+
+
+            <!-- TOMBOL FOTO -->
+
+            <button
+                class="memory-btn"
+                onclick="openAlbum()"
+            >
+
+                See The Photos ✨
+
+            </button>
+
+
+            <!-- MUSIC PLAYER -->
+
+            <div class="music-player">
+
+
+                <div class="music-icon">
+
+                    🎵
+
+                </div>
+
+
+                <div class="music-info">
+
+                    <strong>
+
+                        Our Little Song
+
+                    </strong>
+
+                    <span>
+
+                        ♪ playing softly ♡
+
+                    </span>
+
+                </div>
+
+
+                <button
+                    id="musicButton"
+                    class="music-button"
+                    onclick="toggleMusic()"
+                >
+
+                    ▶
+
+                </button>
+
+
+            </div>
+
+
+            <div class="scroll-text">
+
+                click the button to explore ♡
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         HALAMAN FOTO
+    ========================== -->
+
+    <section
+        id="albumPage"
+        class="album-page"
+    >
+
+
+        <!-- HEADER -->
+
+        <header class="album-header">
+
+
+            <button
+                class="back-btn"
+                onclick="backHome()"
+            >
+
+                ← Back
+
+            </button>
+
+
+            <div class="album-title">
+
+
+                <div class="album-ribbon">
+
+                    🎀
+
+                </div>
+
+
+                <h2>
+
+                    Our Photos
+
+                </h2>
+
+
+                <p>
+
+                    a little collection of pretty photos ♡
+
+                </p>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- GRID FOTO -->
+
+        <main
+            id="photoAlbum"
+            class="photo-album"
+        >
+
+        </main>
+
+
+
+        <!-- PESAN -->
+
+        <section class="album-message">
+
+
+            <div class="cute-cloud">
+
+                ☁️
+
+            </div>
+
+
+            <h2>
+
+                Pretty Photos ♡
+
+            </h2>
+
+
+            <p>
+
+                A little collection made with love and cute vibes.
+
+            </p>
+
+
+            <div class="heart-line">
+
+                ♡ ♡ ♡
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         POPUP FOTO
+    ========================== -->
+
+    <div
+        id="modal"
+        class="modal"
+    >
+
+
+        <button
+            class="close"
+            onclick="closePhoto()"
+        >
+
+            ×
+
+        </button>
+
+
+        <div class="modal-content">
+
+
+            <img
+                id="modalImage"
+                src=""
+                alt="Photo"
+            >
+
+
+            <p id="modalText"></p>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
